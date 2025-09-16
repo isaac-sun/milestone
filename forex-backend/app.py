@@ -38,7 +38,7 @@ def send_rate_alert(current_rate):
     msg = Message(
         subject='今日汇率提醒',
         sender=app.config['MAIL_USERNAME'],
-        recipients=[app.config['MAIL_USERNAME']]
+        recipients=app.config['MAIL_RECIPIENTS']
     )
     
     body = f"""
